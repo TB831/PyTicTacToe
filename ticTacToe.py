@@ -53,3 +53,9 @@ def choose_first():
         return 'Player 2'
     else:
         return 'Player 1'
+
+def space_check(board, position):
+    '''
+    Function to return whether space on board is available
+    '''
+    return board[position] == ' '
