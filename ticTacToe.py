@@ -59,3 +59,12 @@ def space_check(board, position):
     Function to return whether space on board is available
     '''
     return board[position] == ' '
+
+def full_board_check(board):
+    '''
+    function to check if board is full
+    '''
+    for i in range(0,10):
+        if space_check(board, i):
+            return False
+        return True
