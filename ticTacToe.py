@@ -77,3 +77,6 @@ def player_choice(board):
     while position not in '1 2 3 4 5 6 7 8 9'.split() or not space_check(board, int(position)):
         position = raw_input('Choose your: (1-9) ')
     return int(position)
+
+def replay():
+    return raw_input('Do you want to play again? enter Yes or No: ').lower().startswith('y')
