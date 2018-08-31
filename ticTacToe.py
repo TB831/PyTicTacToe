@@ -1,7 +1,7 @@
 # For using the same code in either Python 2 or 3
 from __future__ import print_function
+import random
 
-## Note: Python 2 users, use raw_input() to get player input. Python 3 users, use input()
 from IPython.display import clear_output
 def display_board(board):
     '''
@@ -45,7 +45,6 @@ def win_check(board,mark):
         (if board[2] == mark and board[5] == mark and board[8] == mark) or
         (if board[3] == mark and board[6] == mark and board[9] == mark)
 
-import random
 def choose_first():
     '''
     Function to randomly decide which player goes first
