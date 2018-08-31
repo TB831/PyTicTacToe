@@ -25,3 +25,32 @@ def player_input():
         return ('X', 'O')
     else:
         return ('O', 'X')
+
+def place_marker(board, marker, position):
+    '''
+    Function assigns marker to the board position
+    '''
+    board[position] = marker
+
+def win_check(board,mark):
+    '''
+    Function to check for winner
+    '''
+    return (if board[7] == mark and board[8] == mark and board[9] == mark) or
+        (if board[4] == mark and board[5] == mark and board[6] == mark) or
+        (if board[1] == mark and board[2] == mark and board[3] == mark) or
+        (if board[1] == mark and board[5] == mark and board[9] == mark) or
+        (if board[3] == mark and board[5] == mark and board[7] == mark) or
+        (if board[1] == mark and board[4] == mark and board[7] == mark) or
+        (if board[2] == mark and board[5] == mark and board[8] == mark) or
+        (if board[3] == mark and board[6] == mark and board[9] == mark)
+
+import random
+def choose_first():
+    '''
+    Function to randomly decide which player goes first
+    '''
+    if random.randint(0, 1) == 0:
+        return 'Player 2'
+    else:
+        return 'Player 1'
