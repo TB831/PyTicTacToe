@@ -13,3 +13,15 @@ def display_board(board):
     print(board[4] + '|' + board[5] + '|' + board[6])
     print('-----')
     print(board[1] + '|' + board[2] + '|' + board[3])
+
+def player_input():
+    '''
+    Function defined to take player input
+    '''
+    marker = ''
+    while not (marker == 'X' or marker == 'O'):
+        marker = raw_input('Player 1: Do you want to be X or O?').upper()
+    if marker == 'X':
+        return ('X', 'O')
+    else:
+        return ('O', 'X')
