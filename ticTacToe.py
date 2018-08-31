@@ -68,3 +68,12 @@ def full_board_check(board):
         if space_check(board, i):
             return False
         return True
+
+def player_choice(board):
+    '''
+    function that inputs players next position then check if it is free
+    '''
+    position = ' '
+    while position not in '1 2 3 4 5 6 7 8 9'.split() or not space_check(board, int(position)):
+        position = raw_input('Choose your: (1-9) ')
+    return int(position)
